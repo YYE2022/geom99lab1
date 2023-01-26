@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Marker Animations With setTimeout()</title>
+    <title>POI Click Events</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style>
-      /* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
 #map {
   height: 100%;
 }
 
-/* 
- * Optional: Makes the sample page fill the window. 
- */
+/* Optional: Makes the sample page fill the window. */
 html,
 body {
   height: 100%;
@@ -22,32 +18,29 @@ body {
   padding: 0;
 }
 
-#floating-panel {
-  position: absolute;
-  top: 10px;
-  left: 25%;
-  z-index: 5;
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #999;
-  text-align: center;
-  font-family: "Roboto", "sans-serif";
-  line-height: 30px;
-  padding-left: 10px;
+.title {
+  font-weight: bold;
 }
 
-#floating-panel {
-  margin-left: -52px;
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
 }
     </style>
 
     <script type="module" src="maps.js"></script>
   </head>
   <body>
-    <div id="floating-panel">
-      <button id="drop">Drop Markers</button>
-    </div>
     <div id="map"></div>
+    <div id="infowindow-content">
+      <img id="place-icon" src="" height="16" width="16" />
+      <span id="place-name" class="title"></span><br />
+      Place ID <span id="place-id"></span><br />
+      <span id="place-address"></span>
+    </div>
 
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
@@ -56,8 +49,9 @@ body {
       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
       -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&libraries=places&v=weekly"
       defer
     ></script>
   </body>
 </html>
+ 
