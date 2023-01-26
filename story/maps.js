@@ -1,26 +1,50 @@
-// This example creates a 2-pixel-wide red polyline showing the path of
-// the first trans-Pacific flight between Oakland, CA, and Brisbane,
-// Australia which was made by Charles Kingsford Smith.
+
+
+// If you're adding a number of markers, you may want to drop them on the map
+// consecutively rather than all at once. This example shows how to use
+// window.setTimeout() to space your markers' animation.
+const neighborhoods = [
+  { lat: 64.1466, lng: -21.9426 },
+  { lat: 64.49, lng: -18.48 },
+
+];
+let markers = [];
+let map;
+
 function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
     center: { lat: 64.9631, lng: -19.0208 },
-    mapTypeId: "terrain",
   });
-  const flightPlanCoordinates = [
-    { lat: 64.1466, lng: -21.9426 },
-    { lat: 65.2333, lng: -21.5542 },
+  document.getElementById("drop").addEventListener("click", drop);
+}
 
-  ];
-  const flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    geodesic: true,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
+function drop() {
+  clearMarkers();
 
-  flightPath.setMap(map);
+  for (let i = 0; i < neighborhoods.length; i++) {
+    addMarkerWithTimeout(neighborhoods[i], i * 200);
+  }
+}
+
+function addMarkerWithTimeout(position, timeout) {
+  window.setTimeout(() => {
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map,
+        animation: google.maps.Animation.DROP,
+      })
+    );
+  }, timeout);
+}
+
+function clearMarkers() {
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+
+  markers = [];
 }
 
 window.initMap = initMap;
