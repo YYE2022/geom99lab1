@@ -44,15 +44,15 @@ function initMap() {
     maxWidth: 200,
     ariaLabel: "Uluru",
   });
-  const markers = new google.maps.Marker({
+  const marker = new google.maps.Marker({
     position: uluru,
     map,
     title: "Uluru (Ayers Rock)",
   });
 
-  markers.addListener("click", () => {
+  marker.addListener("click", () => {
     infowindow.open({
-      anchor: markers,
+      anchor: marker,
       map,
     });
   });
