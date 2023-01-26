@@ -7,18 +7,8 @@ const neighborhoods = [
   { lat: 64.1466, lng: -21.9426 },
   { lat: 64.49, lng: -18.48 },
 
-];
-let markers = [];
-let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 7,
-    center: { lat: 64.9631, lng: -19.0208 },
-  });
-  document.getElementById("drop").addEventListener("click", drop);
-}
-  const contentString =
+];  
+const contentString =
     '<div id="content">' +
     '<div id="siteNotice">' +
     "</div>" +
@@ -39,12 +29,12 @@ function initMap() {
     "(last visited June 22, 2009).</p>" +
     "</div>" +
     "</div>";
-  const infowindow = new google.maps.InfoWindow({
+const infowindow = new google.maps.InfoWindow({
     content: contentString,
     maxWidth: 200,
     ariaLabel: "Uluru",
   });
-  const marker = new google.maps.Marker({
+const marker = new google.maps.Marker({
     position: uluru,
     map,
     title: "Uluru (Ayers Rock)",
@@ -56,6 +46,17 @@ function initMap() {
       map,
     });
   });
+let markers = [];
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 7,
+    center: { lat: 64.9631, lng: -19.0208 },
+  });
+  document.getElementById("drop").addEventListener("click", drop);
+}
+
 function drop() {
   clearMarkers();
 
