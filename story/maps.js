@@ -13,13 +13,13 @@ function initMap() {
     [{ lat: 64.2147, lng: -20.7345 }, "The Golden Circle"],
     [{ lat: 64.7843, lng: -17.2091 }, "Vatnajökull National Park"],
     [{ lat: 63.4053, lng: -19.0634 }, "Black Sand Beach"],
-	[{ lat: 64.9262, lng: -14.0009 }, "East Fjords"],
+    [{ lat: 64.9262, lng: -14.0009 }, "East Fjords"],
     [{ lat: 65.2669, lng: -14.3948 }, "Egilsstaoi - Dettifoss - Myvatn - Akureyri"],
     [{ lat: 65.6826, lng: -18.0907 }, "Akureyri - Snaefellsnes Peninsula"],
-	[{ lat: 64.1466, lng: -21.9426 }, "Snaefellsnes-Reykjavik"],
+    [{ lat: 64.1466, lng: -21.9426 }, "Snaefellsnes-Reykjavik"],
   ];
   // Create an info window to share between markers.
-  const infoWindow2 = new google.maps.InfoWindow();
+  const infoWindow2 = new google.maps.InfoWindow({maxWidth:200});
 
   // Create the markers.
   tourStops.forEach(([position, title], i) => {
