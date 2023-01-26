@@ -17,7 +17,7 @@ function initMap() {
     [{ lat: 63.880001, lng: -22.448055 }, "Blue Lagoon. Geothermal spa"],
     [{ lat: 63.880001, lng: -22.448055 }, "Gullfoss, Golden Falls. Brownish hue of its water. known largest volume falls in all of Europe"],
     [{ lat: 64.1466, lng: -21.9426 }, "Capital of Iceland"],
-    [{ lat: 66.065758,, lng: -17.511412 }, "Husavik Whale Watching"],
+    [{ lat: 66.065758, lng: -17.511412 }, "Husavik Whale Watching"],
   ];
   // Create an info window to share between markers.
   const infoWindow2 = new google.maps.InfoWindow({maxWidth:200});
