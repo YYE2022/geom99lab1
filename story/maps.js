@@ -10,14 +10,17 @@ function initMap() {
   // receives the initial focus when tab is pressed. Use arrow keys to
   // move between markers; press tab again to cycle through the map controls.
   const tourStops = [
+  	[{ lat: 64.1466, lng: -21.9426 }, "Capital of Iceland"],
     [{ lat: 64.2147, lng: -20.7345 }, "The Golden Circle"],
+	  [{ lat: 63.4051, lng: -19.0743 }, "Reynisfjara Beach,Black Sand Beach"],
     [{ lat: 64.7843, lng: -17.2091 }, "Vatnajökull National Park"],
-    [{ lat: 63.4051, lng: -19.0743 }, "Reynisfjara Beach,Black Sand Beach"],
-    [{ lat: 64.400002, lng: -16.799999 }, "Vatnajokull Ice Caves, Crystal Caves. Tours only be done in the winter"],
-    [{ lat: 63.880001, lng: -22.448055 }, "Blue Lagoon. Geothermal spa"],
-    [{ lat: 63.880001, lng: -22.448055 }, "Gullfoss, Golden Falls. Brownish hue of its water. known largest volume falls in all of Europe"],
-    [{ lat: 64.1466, lng: -21.9426 }, "Capital of Iceland"],
-    [{ lat: 66.065758, lng: -17.511412 }, "Husavik Whale Watching"],
+	  [{ lat: 64.400002, lng: -16.799999 }, "Vatnajokull Ice Caves, Crystal Caves. Tours only be done in the winter"],
+    [{ lat: 63.880001, lng: -22.448055 }, "Blue Lagoon. Geothermal spa."],
+    [{ lat: 64.326111, lng: -20.121111 }, "Gullfoss, Golden Falls. Brownish hue of its water. known largest volume falls in all of Europe"],
+	  [{ lat: 63.615833,lng:-19.992779 }, "Seljalandsfoss"],
+    [{ lat: 64.023003,lng:-16.975000 }, "Svartifoss"],
+    [{ lat: 63.529720,lng:-19.513889 }, "Skogafoss "],
+	  [{ lat: 66.065758, lng: -17.511412 }, "Husavik Whale Watching"],
   ];
   // Create an info window to share between markers.
   const infoWindow2 = new google.maps.InfoWindow({maxWidth:200});
