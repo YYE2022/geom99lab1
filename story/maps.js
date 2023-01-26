@@ -4,14 +4,13 @@
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 3,
-    center: { lat: 0, lng: -180 },
+    center: { lat: 64.9631, lng: -19.0208 },
     mapTypeId: "terrain",
   });
   const flightPlanCoordinates = [
-    { lat: 37.772, lng: -122.214 },
-    { lat: 21.291, lng: -157.821 },
-    { lat: -18.142, lng: 178.431 },
-    { lat: -27.467, lng: 153.027 },
+    { lat: 64.1466, lng: -21.9426 },
+    { lat: 65.2333, lng: -21.5542 },
+
   ];
   const flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
