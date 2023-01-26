@@ -35,7 +35,7 @@ const infowindow = new google.maps.InfoWindow({
     ariaLabel: "Uluru",
   });
 const marker = new google.maps.Marker({
-    position: uluru,
+    position: { lat: 64.9631, lng: -19.0208 },
     map,
     title: "Uluru (Ayers Rock)",
   });
