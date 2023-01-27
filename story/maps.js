@@ -17,7 +17,7 @@ function initMap() {
   // receives the initial focus when tab is pressed. Use arrow keys to
   // move between markers; press tab again to cycle through the map controls.
   const tourStops = [
-  	[{ lat: 64.1466, lng: -21.9426 }, "Capital of Iceland"],
+  	[{ lat: 64.1466, lng: -21.9426 }, "Reykjavik, the Capital of Iceland"],
         [{ lat: 64.2147, lng: -20.7345 }, "The Golden Circle Tour"],
 	[{ lat: 64.326111, lng: -20.121111 }, "Gullfoss Falls. Brownish hue of its water. Known largest volume falls in all of Europe"],
 	[{ lat: 63.615833,lng:-19.992779 }, "Seljalandsfoss waterfall"],
@@ -25,7 +25,7 @@ function initMap() {
 	[{ lat: 63.4051, lng: -19.0743 }, "Reynisfjara Beach, aka Black Sand Beach"],
 	[{ lat: 64.023003,lng:-16.975000 }, "Svartifoss waterfall"],
         [{ lat: 64.7843, lng: -17.2091 }, "Vatnajökull National Park"],
-	[{ lat: 64.400002, lng: -16.799999 }, "Vatnajokull Ice Caves, Crystal Caves. Tours only be done in the winter"],
+	[{ lat: 64.400002, lng: -16.799999 }, "Vatnajokull Ice Caves, Crystal Caves. Tours can only be done in the winter"],
 	[{ lat: 66.065758, lng: -17.511412 }, "Husavik Whale Watching"],
         [{ lat: 63.880001, lng: -22.448055 }, "Blue Lagoon. Geothermal spa."],
  
