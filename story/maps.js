@@ -1,3 +1,7 @@
+/* the following code create accessible and focusable markers of some attractions in Iceland */
+/* also by clicking the map, the elevation information can be displayed. */
+/* Iceland is famous for its rugged landscapes, displaying the elevation can be helpful for travellers. */
+
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
@@ -8,7 +12,7 @@ function initMap() {
   const elevator = new google.maps.ElevationService();
   const infowindow = new google.maps.InfoWindow({});
 	
-  /*https://developers.google.com/maps/documentation/javascript/examples/marker-accessibility*/
+  /*Reference: https://developers.google.com/maps/documentation/javascript/examples/marker-accessibility*/
   // Set LatLng and title text for the markers. The first marker (Capital of Iceland)
   // receives the initial focus when tab is pressed. Use arrow keys to
   // move between markers; press tab again to cycle through the map controls.
@@ -48,7 +52,7 @@ function initMap() {
   });
 	
 /* elevation part*/
-/*https://developers.google.com/maps/documentation/javascript/examples/elevation-simple*/
+/*Reference: https://developers.google.com/maps/documentation/javascript/examples/elevation-simple*/
   infowindow.open(map);
   // Add a listener for the click event. Display the elevation for the LatLng of
   // the click inside the infowindow.
